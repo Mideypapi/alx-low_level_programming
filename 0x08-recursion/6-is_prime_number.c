@@ -1,26 +1,26 @@
-#include "main.h"
 #include <stdio.h>
-
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * prime_input - finds out if a number is prime recursively
+ * @a: number to determine if prime
+ * @b: number to check if divisor
+ * Return: 1 if prime, 0 otherwise
  */
-int main(void)
+int prime_input(int a, int b)
 {
-	int r;
-
-	r = _sqrt_recursion(1);
-	printf("%d\n", r);
-	r = _sqrt_recursion(1024);
-	printf("%d\n", r);
-	r = _sqrt_recursion(16);
-	printf("%d\n", r);
-	r = _sqrt_recursion(17);
-	printf("%d\n", r);
-	r = _sqrt_recursion(25);
-	printf("%d\n", r);
-	r = _sqrt_recursion(-1);
-	printf("%d\n", r);
-	return (0);
+	if (a == b)
+		return (1);
+	if (!(a % b))
+		return (0);
+	return (prime_input(a, b + 1));
+}
+/**
+ * is_prime_number - returns if a number is prime
+ * @n: check if the number is a prime
+ * Return: 1 if it is prime and 0 if otherwise
+ */
+int is_prime_number(int n)
+{
+	if (n < 2)
+		return (0);
+	return (prime_input(n, 2));
 }
