@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -7,9 +7,9 @@ i#include "main.h"
 #include <stdlib.h>
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output
- * @filename: the name of the file to read
- * @letters: the number of letters to read and print
+ * read_textfile - reads a text file and prints it to the POSIX standard output.
+ * @filename: the name of the file to read.
+ * @letters: the number of letters to read and print.
  *
  * Return: The number of letters read and printed, or -1 on failure
  */
